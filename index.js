@@ -1,13 +1,24 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
-
+  for (let i=0; i< array.length; i++){
+    const complement = target -array[i];
+    for (let j=i+1; j<array.length; j++){
+      if (array[j]===complement) return true;
+    }
+    }
+    return false;
+  }
+ 
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
   Add your pseudocode here
+  -function takes in an array and  target
+  -ittirates through the array
+  -if two numbers within the array adds up to the target value, return true
+  -otherwise return false
 */
 
 /*
